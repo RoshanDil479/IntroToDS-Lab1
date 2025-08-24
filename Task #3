@@ -1,0 +1,20 @@
+entry1 = input("Enter item and price (e.g. Apple, 2.99): ")
+name1, price1 = entry1.split(",")
+price1 = float(price1)
+
+entry2 = input("Enter item and price (e.g. Banana, 1.50): ")
+name2, price2 = entry2.split(",")
+price2 = float(price2)
+
+entry3 = input("Enter item and price (e.g. Milk, 3.25): ")
+name3, price3 = entry3.split(",")
+price3 = float(price3)
+
+total = price1 + price2 + price3
+
+print("\nReceipt")
+print(f'{"Item":<15}{"Price":>10}')
+print(f'{name1:<15}{price1:>10.2f}')
+print(f'{name2:<15}{price2:>10.2f}')
+print(f'{name3:<15}{price3:>10.2f}')
+print(f'{"Total":<15}{total:>10.2f}')
