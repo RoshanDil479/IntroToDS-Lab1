@@ -1,0 +1,26 @@
+x = input("Enter a value: ")
+dot = 0
+sign = 0
+valid = True
+for i in range(len(x)):
+    if x[i] == "-":
+        if i == 0:
+            sign += 1
+        else:
+            valid = False
+    elif x[i] == ".":
+        dot += 1
+        if dot > 1:
+            valid = False
+    elif not ("0" <= x[i] <= "9"):
+        valid = False
+if valid and dot == 0:
+    final = int(x)
+    original_type = "int"
+elif valid and dot == 1:
+    final = round(float(x))
+    original_type = "float"
+else:
+    final = 0
+    original_type = "invalid"
+print(final, original_type)
